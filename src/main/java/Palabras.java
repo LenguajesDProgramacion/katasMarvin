@@ -38,11 +38,16 @@ public class Palabras {
     }
     
     public String checkWordConvert(String cadena){
-        if(cadena.length() <= 5){
+        String comprobacionfor="";
+        if(cadena.length() < 5){
+            for(int i = cadena.length()-1; i >= 0 ; i--){
+                comprobacionfor += cadena.charAt(i);
+            }
+            System.out.print(comprobacionfor +"\n");
       }else{
-            System.out.print("La palabra no se puede convertir porque tiene mas de 5 letras");
+            System.out.print("La palabra no se puede convertir porque tiene mas de 5 letras"+"\n");
         }
-        return cadena;
+        return comprobacionfor;
     }
 
     public String WordContent(String cadena) {
